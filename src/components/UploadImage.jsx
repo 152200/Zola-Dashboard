@@ -78,6 +78,7 @@ export default function UploadImage() {
       const response = await axios.post('https://zola-backend-q9aq.onrender.com/products', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
+           "Access-Control-Allow-Origin": "*",
         },
       });
       toast.success("تمت إضافة المنتج بنجاح");
