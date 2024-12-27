@@ -79,6 +79,7 @@ export default function UploadImage() {
         headers: {
           'Content-Type': 'multipart/form-data',
            "Access-Control-Allow-Origin": "*",
+           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
         },
       });
       toast.success("تمت إضافة المنتج بنجاح");
