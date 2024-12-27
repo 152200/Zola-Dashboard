@@ -11,7 +11,7 @@ export default function Customers() {
 
 //   // Fetch customers from the database
   function getUsers(){
-    axios.get('http://localhost:3000/users')
+    axios.get('https://zola-backend-q9aq.onrender.com/users')
       .then(response => {
         const customerList = response.data.filter(customer => !customer.isAdmin); // Filter out admins
         setCustomers(customerList);
@@ -32,7 +32,7 @@ export default function Customers() {
 
   const handleSave = async (customer, index) => {
     try {
-      await axios.put(`http://localhost:3000/users/${customer._id}`, customer);
+      await axios.put(`https://zola-backend-q9aq.onrender.com/users/${customer._id}`, customer);
       toast.success('Customer details updated successfully');
     } catch (error) {
       console.error('Error updating customer:', error);

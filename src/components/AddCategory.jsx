@@ -39,7 +39,7 @@ export default function AddCategory() {
     data.append('image', formData.image);
 
     try {
-      const response = await axios.post('http://localhost:3000/categories', data, {
+      const response = await axios.post('https://zola-backend-q9aq.onrender.com/categories', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

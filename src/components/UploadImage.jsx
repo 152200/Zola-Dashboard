@@ -75,7 +75,7 @@ export default function UploadImage() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/products', data, {
+      const response = await axios.post('https://zola-backend-q9aq.onrender.com/products', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
