@@ -11,7 +11,7 @@ export default function Orders() {
 
 //   // Fetch orders from the database
   function getOrders(){
-    axios.get('http://localhost:3000/orders')
+    axios.get('https://zola-backend-q9aq.onrender.com/orders')
       .then(response => {
         const ordersLis = response.data.filter(customer => !customer.isAdmin); // Filter out admins
         setOrders(ordersLis);
@@ -32,7 +32,7 @@ export default function Orders() {
 
   const handleSave = async (order, index) => {
     try {
-      await axios.put(`http://localhost:3000/orders/${order._id}`, { status: order.status });
+      await axios.put(`https://zola-backend-q9aq.onrender.com/orders/${order._id}`, { status: order.status });
       toast.success('Order status updated successfully');
     } catch (error) {
       console.error('Error updating order:', error);
