@@ -43,7 +43,7 @@ export default function Orders() {
   const handleDelete = async (orderId) => {
     if (window.confirm('Are you sure you want to delete this order?')) {
       try {
-        await axios.delete(`http://localhost:3000/orders/${orderId}`);
+        await axios.delete(`https://zola-backend-q9aq.onrender.com/orders/${orderId}`);
         setOrders(orders.filter(order => order._id !== orderId)); // Remove order from state
         toast.success('Order deleted successfully');
       } catch (error) {
