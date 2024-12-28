@@ -125,7 +125,7 @@ export default function UploadImage() {
             {/* Product Name */}
             <div className="mb-5">
               <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Product Name
+                اسم المنتج
               </label>
               <input
                 type="text"
@@ -141,7 +141,7 @@ export default function UploadImage() {
             {/* Product Description */}
             <div className="mb-5">
               <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Description
+                الوصف
               </label>
               <input
                 type="text"
@@ -156,7 +156,7 @@ export default function UploadImage() {
             {/* Single Image Upload */}
             <div className="mb-5">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Upload Main Image
+                الصورة الرئيسية 
               </label>
               <input
                 onChange={handleSingleImageChange}
@@ -170,7 +170,7 @@ export default function UploadImage() {
             {/* Multiple Images Upload */}
             <div className="mb-5">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Upload Additional Images
+                صور إضافية
               </label>
               <input
                 onChange={handleMultipleImagesChange}
@@ -189,7 +189,7 @@ export default function UploadImage() {
             {/* Brand */}
             <div className="mb-5">
               <label htmlFor="brand" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Select The Brand
+                العلامة التجارية
               </label>
               <select
                 id="brand"
@@ -198,7 +198,7 @@ export default function UploadImage() {
                 onChange={handleChange}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
-                <option value="">Select a brand</option>
+                <option value="">اختر العلامة</option>
                 <option value="gucci">Gucci</option>
                 <option value="brada">Brada</option>
                 <option value="shanel">Shanel</option>
@@ -210,7 +210,7 @@ export default function UploadImage() {
             {/* Product Price */}
             <div className="mb-5">
               <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Product Price
+                السعر
               </label>
               <input
                 type="text"
@@ -226,7 +226,7 @@ export default function UploadImage() {
             {/* Category */}
             <div className="mb-5">
               <label htmlFor="category" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Select The Category
+                الفئة
               </label>
               <select
                 id="category"
@@ -235,7 +235,7 @@ export default function UploadImage() {
                 onChange={handleChange}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
-                <option value="">Select a category</option>
+                <option value="">اختر الفئة</option>
                 <option value="النساء">النساء</option>
                 <option value="الرجال">الرجال</option>
                 <option value="ساعات">ساعات</option>
@@ -249,7 +249,7 @@ export default function UploadImage() {
             {/* Count in Stock */}
             <div className="mb-5">
               <label htmlFor="countInStock" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Count In Stock
+                عدد القطع في المخزن
               </label>
               <input
                 type="text"
@@ -265,7 +265,7 @@ export default function UploadImage() {
             {/* Discount */}
             <div className="mb-5">
               <label htmlFor="discount" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Discount Percentage
+                نسبة الخصم
               </label>
               <input
                 type="text"
@@ -280,7 +280,7 @@ export default function UploadImage() {
 
             {/* Submit the form */}
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Submit
+              تقديم النموذج
             </button>
           </form>
           {/* Form Area End */}
