@@ -10,7 +10,7 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
 //   // Fetch orders from the database
-  function getOrders(){
+ function getOrders(){
     axios.get('https://zola-backend-q9aq.onrender.com/orders')
       .then(response => {
         const ordersLis = response.data.filter(customer => !customer.isAdmin); // Filter out admins

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../partials/Header';
 import Sidebar from '../partials/Sidebar';
 import axios from "axios";
@@ -8,7 +8,7 @@ export default function UploadImage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [imagePreviews, setImagePreviews] = useState([]); // For multiple image previews
-
+  const [brands, setBrands] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -108,6 +108,21 @@ export default function UploadImage() {
     }
   };
 
+
+
+    useEffect(() => {
+        const fetchBrands = async () => {
+            try {
+                const response = await axios.get(`https://zola-backend-q9aq.onrender.com/categories`);
+                setBrands(response.data);
+            } catch (error) {
+                toast.error(error.message);
+            }
+        };
+        
+        fetchBrands();
+    }, []);
+
   return (
     <div className="flex h-screen overflow-auto">
       {/* Sidebar */}
@@ -199,11 +214,15 @@ export default function UploadImage() {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
                 <option value="">اختر العلامة</option>
-                <option value="gucci">Gucci</option>
-                <option value="brada">Brada</option>
+                {
+                  brands?.map((brand) => (
+                    <option value={brand.name}>{brand.name}</option>
+                  ))
+                }
+                {/* <option value="brada">Brada</option>
                 <option value="shanel">Shanel</option>
                 <option value="karamel">Karamel</option>
-                <option value="loui vaton">Loui Vaton</option>
+                <option value="loui vaton">Loui Vaton</option> */}
               </select>
             </div>
 
